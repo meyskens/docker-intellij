@@ -3,6 +3,6 @@ FROM openjdk:8
 RUN apt-get update && apt-get install -y git wget tar
 
 RUN wget https://download.jetbrains.com/idea/ideaIU-2017.2.5.tar.gz &&\
-    tar -xzf  && rm -f ideaIU-2017.2.5.tar.gzr
+    tar -xzf ideaIU-2017.2.5.tar.gz && rm -f ideaIU-2017.2.5.tar.gz
 
 CMD idea-IU-172.4343.14/bin/idea.sh
