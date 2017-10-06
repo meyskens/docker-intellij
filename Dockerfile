@@ -1,6 +1,6 @@
 FROM openjdk:8
 
-RUN RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y \
 	dirmngr \
 	gnupg \
 	--no-install-recommends \
