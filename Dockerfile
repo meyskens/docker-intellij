@@ -1,8 +1,14 @@
 FROM openjdk:8
 
 RUN apt-get update && apt-get install -y git wget tar maven iceweasel fish
-         
-RUN wget https://download.jetbrains.com/idea/ideaIU-2018.1.3.tar.gz &&\
-    tar -xzf ideaIU-2017.3.2.tar.gz && rm -f ideaIU-2017.3.2.tar.gz
 
-CMD idea-IU-173.4127.27/bin/idea.sh
+ENV version IU-2018.1.3
+
+RUN wget https://download.jetbrains.com/idea/idea${version}.tar.gz &&\
+    tar -xzf idea${version}.tar.gz && rm -f idea${version}.tar.gz
+
+ENV in_version IU-181.4892.42
+
+
+CMD idea-${in_version}/bin/idea.sh
+# CMD idea-IU-181.4892.42/bin/idea.sh
